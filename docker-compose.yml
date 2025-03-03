@@ -1,0 +1,15 @@
+services:
+
+  uppercase-api:
+    build: .
+    container_name: uppercase-api
+    hostname: uppercase-api
+    restart: always
+    command: sh 'entrypoint.sh'
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./storage_files:/app/storage_files
+    environment:
+      TZ: ${TZ:-Europe/Moscow}
+      SECRET_KEY: ${SECRET_KEY:-"SECRET_KEY"}

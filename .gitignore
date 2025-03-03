@@ -1,0 +1,6 @@
+.idea
+venv
+storage_files
+*.sqlite3
+*.log
+test_file.txt
